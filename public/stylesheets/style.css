@@ -1,0 +1,62 @@
+.form-inline {
+  display: inline;
+}
+
+.btn-buffer {
+  margin: 5px 5px;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 4em;
+}
+
+.btn.outline {
+  background: #563d7c;
+  padding: 12px 22px;
+}
+
+.btn-primary.outline {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+  color: #563d7c;
+  border-color: #fff;
+  background-color: #fff;
+}
+
+.btn-primary.outline:active, .btn-primary.outline.active {
+  border-color: #fff;
+  color: #fff;
+  box-shadow: none;
+}
+
+#hide-div {
+  display: block;
+}
+
+#show-div {
+  display: block;
+}
+
+.jumbotron {
+  background-image: linear-gradient(to bottom,#563d7c 0,#6f5499 100%);
+  color: #fff;
+  height: 100%;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+#yes-worksheets {
+  display: none;
+  background-color: #fff;
+  float: none;
+  margin: 0 auto;
+  width: 66%;
+  color: #000;
+  text-align: left;
+}
