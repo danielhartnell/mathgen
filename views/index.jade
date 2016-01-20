@@ -29,14 +29,25 @@ html
       h1 One Step Equation Math Generator
       p.lead Automatically generate one step equation worksheets for teachers and students.
       button#configure-worksheets.btn.btn-primary.btn-lg.outline.btn-buffer Configure
-      #config.hide-me
-        p.lead Some stuff goes here
+      #config.hide-me.center-block
+        select#number.form-control.form-buffer
+          option.selected Number of Equations
+          option 5
+          option 10
+          option 15
+          option 25
+        select#complexity.form-control.form-buffer
+          option.selected Complexity
+          option Whole Numbers
+          option Fractions
+          option Mixed Numbers
       form(action="/mkpdf", method="post", class="form-inline")
         button#get-worksheets.btn.btn-primary.btn-lg.outline.btn-buffer Generate
       br
       br
       #no-worksheets.text-center
         p.lead Set your options. Click "Generate". Download worksheet PDF.
+        small (Defaults: 10 equations; whole numbers)
       #yes-worksheets
     footer.footer
       .container-fluid
