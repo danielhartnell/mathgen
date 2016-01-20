@@ -3,6 +3,8 @@ html
     link(href="https://fonts.googleapis.com/css?family=Oswald", rel="stylesheet", type="text/css")
     link(rel="stylesheet", href="/stylesheets/bootstrap.css", media="all", type="text/css")
     link(rel="stylesheet", href="/stylesheets/style.css", media="all", type="text/css")
+    script(src="https://code.jquery.com/jquery-1.12.0.min.js")
+    script(src="/javascript/interface.js")
   body
     nav.navbar.navbar-default
       .container-fluid
@@ -27,6 +29,8 @@ html
       h1 One Step Equation Math Generator
       p.lead Automatically generate one step equation worksheets for teachers and students.
       button#configure-worksheets.btn.btn-primary.btn-lg.outline.btn-buffer Configure
+      #config.hide-me
+        p.lead Some stuff goes here
       form(action="/mkpdf", method="post", class="form-inline")
         button#get-worksheets.btn.btn-primary.btn-lg.outline.btn-buffer Generate
       br
