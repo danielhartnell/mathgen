@@ -1,6 +1,6 @@
 .form-buffer {
-  margin: 10px 10px;
   width: 33%;
+  margin: 10px auto;
 }
 
 #config.hide-me {
