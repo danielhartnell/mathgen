@@ -12,10 +12,21 @@ router.get('/', function(req, res, next) {
 // Route POST to mkpdf
 router.post('/mkpdf', function(req, res, next) {
   var doc = new PDFDocument;
-  doc.pipe(fs.createWriteStream("equations.pdf"));
-  doc.text('Testing PDF generation.');
+  var enumb = req.query.enumb;
+
+  doc.text("One Step Equation Worksheet");
+  doc.text(" ");
+  doc.text("Name:______________________");
+  doc.text("Date:______________________");
+  doc.text("Period:________");
+  doc.text(" ");
+
+  for(i = 0; i <= enumb; i++) {
+    doc.text("2 + " + enumb + " = X");
+  }
+
+  doc.pipe(res);
   doc.end();
-  res.download("equations.pdf");
 });
 
 module.exports = router;
