@@ -36,11 +36,7 @@ router.get('/one-step-pdf', function(req, res) {
     variable = variables[Math.floor(Math.random() * variables.length)];
     thisStyle = style[Math.floor(Math.random() * style.length)];
 
-    if(thisStyle === 'complex') {
-      return num1 + " " + operator + " " + num2 + variable + " = " + result;
-    } else {
-      return num1 + variable + " = " + result;
-    }
+    return num1 + variable + " = " + result;
   };
 
   // Generate PDF based on input
