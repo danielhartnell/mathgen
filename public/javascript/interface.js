@@ -3,9 +3,12 @@ $(document).ready(function() {
     $("#config.hide-me").slideToggle();
   });
 
-  var n = $("#number option:selected").text();
-  
   $("#get-worksheets").click(function() {
-    $.post("/mkpdf?enumb=" + 12);
+    numEquations = parseInt($("#number-of-equations option:selected").text());
+    complexity = $("#complexity option:selected").text();
+    answerKey = $("#answer-key option:selected").text();
+
+    console.log('Ready to get PDF');
+    window.location.href = "/one-step-pdf?numEquations=" + numEquations + "&complexity=" + complexity + "&answerKey=" + answerKey;
   });
 });
