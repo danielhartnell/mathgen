@@ -29,26 +29,20 @@ html
       h1 One Step Equation Math Generator
       p.lead Automatically generate one step equation worksheets for teachers and students.
       button#configure-worksheets.btn.btn-primary.btn-lg.outline.btn-buffer Configure
+      button#get-worksheets.btn.btn-primary.btn-lg.outline.btn-buffer Generate
       #config.hide-me.center-block
         p How many questions do you want?
         select#number-of-equations.form-control.form-buffer
           option.selected 5
           option 10
           option 15
+          option 20
           option 25
-        // p How difficult should the questions be?
-        // select#complexity.form-control.form-buffer
-          // option.selected Whole Numbers
-        // p Do you need an answer key?
-        // select#answer-key.form-control.form-buffer
-          // option.selected No
-          // option Yes
-      button#get-worksheets.btn.btn-primary.btn-lg.outline.btn-buffer Generate
+          option 50
       br
       br
       #no-worksheets.text-center
         p.lead Set your options. Click "Generate". Download worksheet PDF.
-        small (Defaults: 10 equations; whole numbers)
       #yes-worksheets
     footer.footer
       .container-fluid

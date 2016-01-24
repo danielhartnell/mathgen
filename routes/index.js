@@ -24,19 +24,47 @@ router.get('/one-step-pdf', function(req, res) {
 
   // Generate new equations
   function wnEquation() {
-    high = 150;
-    low = -20;
+    // Random number range
+    high = 30;
+    low = -10;
+
+    // Randomly select variable, operator and style
     operands = ['+','-','/','*'];
     variables = ['x','y','n','b','p','v','k','a'];
     style = ['complex','simple'];
+
+    // Randomly select numbers within range
     result = Math.floor(Math.random() * (high - low) + low);
     num1 = Math.floor(Math.random() * (high - low) + low);
     num2 = Math.floor(Math.random() * (high - low) + low);
+
+    // Store variable operator and style
     operator = operands[Math.floor(Math.random() * operands.length)];
     variable = variables[Math.floor(Math.random() * variables.length)];
     thisStyle = style[Math.floor(Math.random() * style.length)];
 
-    return num1 + variable + " = " + result;
+    // I felt like difficult numbers came up too often so I implemented this
+    if(Math.floor(Math.random() * (4-0) + 0) === 0) {
+      // Hard mode enabled
+      result = Math.floor(Math.random() * (150 - -15) + -15);
+      num1 = Math.floor(Math.random() * (150 - -15) + -15);
+      num2 = Math.floor(Math.random() * (150 - -15) + -15);
+    }
+
+    if(num1 < 0) {
+      num1 = "(" + num1 + ")";
+    }
+
+    if(num2 < 0) {
+      num2 = "(" + num2 + ")";
+    }
+    
+    // Return appropriate equation
+    if(thisStyle === 'complex') {
+      return variable + " " + operator + " " + num1 + " = " + result;
+    } else {
+      return num1 + variable + " = " + result;
+    };
   };
 
   // Generate PDF based on input
