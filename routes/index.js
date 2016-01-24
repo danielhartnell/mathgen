@@ -18,6 +18,11 @@ router.get('/one-step-pdf', function(req, res) {
   complexity = req.query.complexity;
   answerKey = req.query.answerKey;
 
+  // Make sure someone doesn't cripple the app
+  if(numEquations > 50) {
+    numEquations = 50;
+  }
+
   // Response headers
   res.setHeader('Content-disposition', 'attachment; filename=equations.pdf');
   res.setHeader('Content-type', 'application/pdf');
