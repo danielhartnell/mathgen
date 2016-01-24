@@ -51,6 +51,22 @@ router.get('/one-step-pdf', function(req, res) {
       num2 = Math.floor(Math.random() * (150 - -15) + -15);
     }
 
+    while(result === 0) {
+      result = Math.floor(Math.random() * (150 - -15) + -15);
+    }
+
+    while(num1 === 0) {
+      num1 = Math.floor(Math.random() * (150 - -15) + -15);
+    }
+
+    while(num2 === 0) {
+      num2 = Math.floor(Math.random() * (150 - -15) + -15);
+    }
+
+    if(num1 < 0) {
+      num1 = "(" + num1 + ")";
+    }
+
     if(num2 < 0) {
       num2 = "(" + num2 + ")";
     }
