@@ -30,17 +30,19 @@ html
       p.lead Automatically generate one step equation worksheets for teachers and students.
       button#configure-worksheets.btn.btn-primary.btn-lg.outline.btn-buffer Configure
       #config.hide-me.center-block
-        select#number.form-control.form-buffer
-          option.selected Number of Equations
-          option 5
+        p How many questions do you want?
+        select#number-of-equations.form-control.form-buffer
+          option.selected 5
           option 10
           option 15
           option 25
-        select#complexity.form-control.form-buffer
-          option.selected Complexity
-          option Whole Numbers
-          option Fractions
-          option Mixed Numbers
+        // p How difficult should the questions be?
+        // select#complexity.form-control.form-buffer
+          // option.selected Whole Numbers
+        // p Do you need an answer key?
+        // select#answer-key.form-control.form-buffer
+          // option.selected No
+          // option Yes
       button#get-worksheets.btn.btn-primary.btn-lg.outline.btn-buffer Generate
       br
       br
@@ -50,4 +52,4 @@ html
       #yes-worksheets
     footer.footer
       .container-fluid
-        p.text-muted Thanks for visiting!
+        p.text-muted I did borrow the color scheme from Bootstrap... Thanks for visiting :)
