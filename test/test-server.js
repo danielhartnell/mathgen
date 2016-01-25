@@ -5,7 +5,7 @@ var should = chai.should();
 
 chai.use(chaiHttp);
 
-describe('Test 1', function() {
+describe('Did I get the appropriate HTTP responses? ¯\\_(ツ)_/¯', function() {
   it('should return homepage on / GET', function(done) {
     chai.request(server)
       .get('/')
@@ -14,7 +14,7 @@ describe('Test 1', function() {
         done();
       });
   });
-  it('should successfully download pdf', function(done) {
+  it('should successfully download pdf on /one-step-pdf GET', function(done) {
     chai.request(server)
       .get('/one-step-pdf?numEquations=10')
       .end(function(err, res) {
