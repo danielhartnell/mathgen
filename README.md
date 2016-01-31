@@ -7,9 +7,26 @@ I wanted to create a tool for teachers to generate math worksheets. My primary g
 
 ## Use
 
+### Production Access
+
 This application is currently hosted on Heroku. You can access it [here](https://teacher-toolkit.herokuapp.com/).
 
 Right now this is a single page which dynamically generates a PDF that you can download. In the immediate future I plan on improving the ability to create useful one-step equations and add new configuration options. After that I may include other other common math worksheets.
+
+### Local Deployment (testing)
+
+- Clone repository
+- Install dependencies
+- Run available tests with mocha
+- Run application
+
+```
+$ npm install
+$ mocha
+$ npm start
+```
+
+**Note:** You may see New Relic errors after starting the application. This can be suppressed by removing New Relic from the application or by setting the appropriate license key value.
 
 **Current Iteration**
 
