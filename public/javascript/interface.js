@@ -9,6 +9,9 @@ $(document).ready(function() {
     answerKey = $("#answer-key option:selected").text();
 
     console.log('Ready to get PDF');
-    window.location.href = "/one-step-pdf?numEquations=" + numEquations + "&complexity=" + complexity + "&answerKey=" + answerKey;
+
+    window.location.href = "/one-step-pdf?numEquations=" + numEquations +
+      "&complexity=" + complexity +
+      "&answerKey=" + answerKey;
   });
 });
